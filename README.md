@@ -44,8 +44,8 @@
             "(mark)": [option1, option2, ...] eg. "a":['sans','papyrus'], result: "这个骷髅好像sans", etc.
         }
         }
-            		]
-"replaceable_body":[same as "replaceable_head"]
+            		],
+"replaceable_body":[same as "replaceable_head"],
 "content_end": end of the passage.
 }
 ```
