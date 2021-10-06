@@ -122,7 +122,7 @@ def 生成开头():
         if randint(0,配置['bullshit'])==0:
             tmp+=词库['bullshit'][randint(0,len(词库['bullshit'])-1)]*randint(1,3)
         add=''
-    print(len(tmp))
+    #print(len(tmp))
     return tmp
 
 def 生成正文():
@@ -161,7 +161,7 @@ def 生成正文():
             #print(len(tmp))
         tmp_all+=tmp+'\n'
         tmp=''
-    print(len(tmp_all))
+    #print(len(tmp_all))
     return tmp_all.strip()
 
 def 生成():
