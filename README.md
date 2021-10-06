@@ -84,7 +84,7 @@ nanhun density 字段则是“♂”符号出现的概率（越小概率越低�
 
 body paragraph 指正文段落数，head control length 为开头最大字符数（最好设的比较大），body paragraph control length 为正文最大字符数（同样设大点），use ending 则是选择是否要抽取一个结尾。
 
-generate passage numbers 指要生成几个文章，passage auto save 指是否自动保存生成的文章，bilibili auto ky 指是否要将生成的东西自动发到睿站（未做）。
+generate passage numbers 指要生成几个文章，passage auto save 指是否自动保存生成的文章，bilibili auto ky 指是否要将生成的东西自动发到睿站（注：睿站发表文字上限1000）。
 
 ps：这个文件已经在 repo 里了。
 
@@ -97,6 +97,10 @@ ps：这个文件已经在 repo 里了。
 ```
 
 即可。
+
+## 借物表
+
+[SocialSisterYi的 bv 号转 av 号算法]([bilibili-API-collect/bvid_desc.md at master · SocialSisterYi/bilibili-API-collect (github.com)](https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/other/bvid_desc.md))
 
 ## 其它
 
