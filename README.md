@@ -76,6 +76,7 @@ use_ending=true
 generate_passage_numbers=2
 passage_auto_save=true
 bilibili_auto_ky=false
+bilibili_ky_list=BV*******
 ```
 
 其中，word list 字段为使用的词库。
@@ -84,7 +85,7 @@ nanhun density 字段则是“♂”符号出现的概率（越小概率越低�
 
 body paragraph 指正文段落数，head control length 为开头最大字符数（最好设的比较大），body paragraph control length 为正文最大字符数（同样设大点），use ending 则是选择是否要抽取一个结尾。
 
-generate passage numbers 指要生成几个文章，passage auto save 指是否自动保存生成的文章，bilibili auto ky 指是否要将生成的东西自动发到睿站（注：睿站发表文字上限1000）。
+generate passage numbers 指要生成几个文章，passage auto save 指是否自动保存生成的文章，bilibili auto ky 指是否要将生成的东西自动发到睿站（注：睿站发表文字上限1000），bilibili ky list 为发布 ky 内容的视频的 bv 号。
 
 ps：这个文件已经在 repo 里了。
 
