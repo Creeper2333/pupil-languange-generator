@@ -1,7 +1,12 @@
 import json
 from random import randint
 import configparser
-import time
+import time,os
+try:
+    import bili_ky
+except ImportError:
+    input('依赖都安装完了吗？！')
+    os._exit(0)
 
 词库=None
 配置=None
@@ -30,6 +35,7 @@ def read_config():
     生成文章数=int(迫真自动化[0][1])
     自动保存文章=str(迫真自动化[1][1])
     睿站ky胜者为王=str(迫真自动化[2][1])
+    ky视频列表=str(迫真自动化[3][1]).split()
 
     return (
         {
@@ -44,7 +50,8 @@ def read_config():
             "use_ending":是否使用结尾段,
             "passages":生成文章数,
             "autosave":自动保存文章,
-            "bili_ky":睿站ky胜者为王
+            "bili_ky":睿站ky胜者为王,
+            'bili_ky_list':ky视频列表
         }
     )
 
@@ -115,10 +122,12 @@ def 生成开头():
         if randint(0,配置['bullshit'])==0:
             tmp+=词库['bullshit'][randint(0,len(词库['bullshit'])-1)]*randint(1,3)
         add=''
+    print(len(tmp))
     return tmp
 
 def 生成正文():
     for i in range(0,配置['content_para']):
+        tmp_all=''
         tmp=''
         end=词库['sentence_end_body']
         while len(tmp)<=配置['para_maxlen']:
@@ -150,8 +159,10 @@ def 生成正文():
                 tmp+=词库['bullshit'][randint(0,len(词库['bullshit'])-1)]*randint(1,3)
             add=''
             #print(len(tmp))
-        tmp+='\n'
-    return tmp.strip()
+        tmp_all+=tmp+'\n'
+        tmp=''
+    print(len(tmp_all))
+    return tmp_all.strip()
 
 def 生成():
     tmp=''
@@ -173,4 +184,9 @@ if __name__=='__main__':
             with open('passage_'+time.strftime('%Y-%m-%d-%H-%M-%S')+' No.'+str(i+1)+'.txt','w',encoding='utf-8') as f:
                 f.write(p)
                 f.close()
+        if 配置['bili_ky']=='true':
+            sessdata,jct=bili_ky.run_login()
+            count=0
+            while count<len(passages) and count<len(配置['bili_ky_list']):
+                bili_ky.send_comment(jct,sessdata,配置['bili_ky_list'][count],passages[count])
             
