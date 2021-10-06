@@ -1,7 +1,7 @@
 import requests
 from MyQR import myqr
 from tkinter import *
-from PIL import ImageTk
+from PIL import ImageTk,Image
 import json,os
 from bv2av import bv2av
 

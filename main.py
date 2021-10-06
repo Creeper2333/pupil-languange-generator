@@ -189,4 +189,4 @@ if __name__=='__main__':
             count=0
             while count<len(passages) and count<len(配置['bili_ky_list']):
                 bili_ky.send_comment(jct,sessdata,配置['bili_ky_list'][count],passages[count])
-            
+                count+=1
