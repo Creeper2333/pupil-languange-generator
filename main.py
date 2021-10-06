@@ -174,7 +174,7 @@ def 生成():
     return tmp
 
 if __name__=='__main__':
-    debug_mode=True
+    debug_mode=True if input('Debug mode?(y/n)')=='y' else False
     配置=read_config()
     词库=加载json(配置['word_file'])
     passages=[]

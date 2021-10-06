@@ -99,6 +99,22 @@ ps：这个文件已经在 repo 里了。
 
 即可。
 
+### 以调试模式运行
+
+这个模式是我拿来测试睿站一键 ky 的，由于可移动设备不在身边无法扫码，所以可以直接手动输入睿站的 token。
+
+```
+> python main.py [sessdata] [bili_jct] [bvid]
+```
+
+然后在提示
+
+```
+Debug mode?(y/n)
+```
+
+输入 y 就行。
+
 ## 借物表
 
 [SocialSisterYi的 bv 号转 av 号算法](https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/other/bvid_desc.md)
