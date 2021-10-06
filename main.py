@@ -1,7 +1,7 @@
 import json
 from random import randint
 import configparser
-import time,os
+import time,os,sys
 try:
     import bili_ky
 except ImportError:
@@ -173,6 +173,7 @@ def 生成():
     return tmp
 
 if __name__=='__main__':
+    debug_mode=True
     配置=read_config()
     词库=加载json(配置['word_file'])
     passages=[]
@@ -185,7 +186,11 @@ if __name__=='__main__':
                 f.write(p)
                 f.close()
         if 配置['bili_ky']=='true':
-            sessdata,jct=bili_ky.run_login()
+            if debug_mode:
+                sessdata=sys.argv[1]
+                jct=sys.argv[2]
+            else:
+                sessdata,jct=bili_ky.run_login()
             count=0
             while count<len(passages) and count<len(配置['bili_ky_list']):
                 bili_ky.send_comment(jct,sessdata,配置['bili_ky_list'][count],passages[count])
