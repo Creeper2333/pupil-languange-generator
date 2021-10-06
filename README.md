@@ -100,7 +100,7 @@ ps：这个文件已经在 repo 里了。
 
 ## 借物表
 
-[SocialSisterYi的 bv 号转 av 号算法]([bilibili-API-collect/bvid_desc.md at master · SocialSisterYi/bilibili-API-collect (github.com)](https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/other/bvid_desc.md))
+[SocialSisterYi的 bv 号转 av 号算法](https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/other/bvid_desc.md)
 
 ## 其它
 
