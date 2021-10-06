@@ -1,5 +1,6 @@
 import json
 from random import randint
+from copy import deepcopy
 import configparser
 import time,os,sys
 try:
@@ -187,8 +188,11 @@ if __name__=='__main__':
                 f.close()
         if 配置['bili_ky']=='true':
             if debug_mode:
+                ml=list()
+                ml.append(sys.argv[3])
                 sessdata=sys.argv[1]
                 jct=sys.argv[2]
+                配置['bili_ky_list']=deepcopy(ml)
             else:
                 sessdata,jct=bili_ky.run_login()
             count=0
