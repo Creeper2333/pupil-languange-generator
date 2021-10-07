@@ -107,13 +107,6 @@ ps：这个文件已经在 repo 里了。
 > python main.py [sessdata] [bili_jct] [bvid]
 ```
 （sessdata 和 bili_jct 均可在睿站 cookies 中找到）
-然后在提示
-
-```
-Debug mode?(y/n)
-```
-
-时输入 y 就行。
 
 ## 借物表
 
