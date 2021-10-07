@@ -84,8 +84,8 @@ def 生成词汇():
         )
     )
 
-def 生成可替换词汇_开头():
-    可替换=词库['replaceable_head'][randint(0,len(词库['replaceable_head'])-1)]
+def 生成可替换词汇(place='head'):
+    可替换=词库['replaceable_'+place][randint(0,len(词库['replaceable_'+place])-1)]
     content=可替换['value']
     for i in 可替换['replace']:
         content=content.replace(i,
@@ -93,7 +93,7 @@ def 生成可替换词汇_开头():
         )
     return content
 def 生成开头():
-    tmp=生成可替换词汇_开头()
+    tmp=生成可替换词汇('head')
     end=词库['sentence_end_head']
     while len(tmp)<=配置['head_maxlen']:
         add=''
@@ -127,15 +127,17 @@ def 生成开头():
     return tmp
 
 def 生成正文():
+    tmp_all=''
     for i in range(0,配置['content_para']):
-        tmp_all=''
         tmp=''
         end=词库['sentence_end_body']
         while len(tmp)<=配置['para_maxlen']:
             add=''
             use_which=randint(0,100)
-            if use_which<10:
+            if use_which<20:
                 add=生成词汇组()
+            elif use_which>=20 and use_which <30:
+                add=生成可替换词汇('body')
             else:
                 add=生成词汇()
             use_nanhun=randint(0,配置['nanhun'])
@@ -163,7 +165,7 @@ def 生成正文():
         tmp_all+=tmp+'\n'
         tmp=''
     #print(len(tmp_all))
-    return tmp_all.strip()
+    return tmp_all
 
 def 生成():
     tmp=''

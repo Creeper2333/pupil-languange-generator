@@ -89,12 +89,12 @@
         {
             "value":"二次元",
             "min_repeat":3,
-            "max_repeat":10
+            "max_repeat":5
         },
         {
             "value":"东方",
             "min_repeat":3,
-            "max_repeat":10
+            "max_repeat":5
         },
         {
             "value":"不攻自破的联盟",
@@ -108,8 +108,8 @@
         },
         {
             "value":"蓝蓝路",
-            "min_repeat":5,
-            "max_repeat":10
+            "min_repeat":2,
+            "max_repeat":4
         },
         {
             "value":"不要停下来啊",
@@ -204,7 +204,7 @@
         {
             "value":"鸡你太美",
             "min_repeat":1,
-            "max_repeat":3
+            "max_repeat":2
         },
         {
             "value":"我做东方鬼畜音mad好吗",
@@ -234,7 +234,7 @@
         {
             "value":"undertale",
             "min_repeat":1,
-            "max_repeat":3
+            "max_repeat":1
         },
         {
             "value":"flowey",
@@ -279,7 +279,7 @@
         {
             "value":"红魔馆",
             "min_repeat":1,
-            "max_repeat":3
+            "max_repeat":2
         },
         {
             "value":"deep♂dark♂fantasy",
