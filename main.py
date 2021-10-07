@@ -110,7 +110,7 @@ def 生成开头():
             add=nh
         else:
             use_space=randint(0,配置['space'])
-            if use_space==0:
+            if use_space==0 and ('♂' not in add):
                 sp=''
                 for i in add:
                     sp+=i.replace(i,i+' ')
@@ -146,7 +146,7 @@ def 生成正文():
                 add=nh
             else:
                 use_space=randint(0,配置['space'])
-                if use_space==0:
+                if use_space==0 and ('♂' not in add):
                     sp=''
                     for i in add:
                         sp+=i.replace(i,i+' ')
@@ -174,7 +174,7 @@ def 生成():
     return tmp
 
 if __name__=='__main__':
-    debug_mode=True if input('Debug mode?(y/n)')=='y' else False
+    debug_mode=True if len(sys.argv)>1 else False
     配置=read_config()
     词库=加载json(配置['word_file'])
     passages=[]
