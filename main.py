@@ -7,7 +7,7 @@ try:
     import bili_ky
 except ImportError:
     input('依赖都安装完了吗？！')
-    os._exit(0)
+    sys.exit()
 
 词库=None
 配置=None
